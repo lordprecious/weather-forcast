@@ -1,0 +1,31 @@
+#mainWrapper {
+	width: 50%;
+	height:500px;
+	background-color: grey;
+	margin: auto;
+	margin-top: 10%;
+	padding: 5px 20px 5px 20px;
+    border-radius: 25px
+
+}
+
+#currentWrapper {
+	width: 100%;
+	height: 320px;
+	background-color: pink;
+
+}
+
+#otherWrapper {
+	width: 100%;
+	height: 180px;
+	background-color: blue;
+	float: bottom;
+
+}
+
+#today {
+	width: 30%;
+	height: 100%;
+	background-color: green;
+}
