@@ -61,8 +61,8 @@ function updateWeather (weather) {
 	temp.innerHTML = weather.temp + "&deg;" + "c";
 	wSpeed.innerHTML = weather.wSpeed + " mph";
 	hum.innerHTML = weather.hum + " %";
-	icn.scr = weather.icn;
-	//icn.src = "./img/" + weather.icn + ".png"
+	//icn.scr = weather.icn;
+	icn.src = "./img/" + weather.icn + ".png"
 }
 
 // function to get the current cordinate
