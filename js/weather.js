@@ -2,7 +2,7 @@ var temp;
 var desc;
 var wSpeed;
 var loc;
-var icon;
+var icn;
 var hum;
 
 // my API key
@@ -31,7 +31,7 @@ function sendRequest (url) {
 			var data = JSON.parse(xmlhttp.responseText);
 			var weather = {};
 			weather.loc = data.name;
-			weather.icon = data.weather[0].id;
+			weather.icn = data.weather[0].icon;
 			weather.desc = data.weather[0].description;
 			weather.temp = tempToCelcius(data.main.temp);
 			weather.wSpeed = data.wind.speed;
@@ -58,19 +58,22 @@ function updateWeather (weather) {
 	//weda.innerHTML = weather;
 	loc.innerHTML = weather.loc;
 	desc.innerHTML = weather.desc;
-	temp.innerHTML = weather.temp;
-	wSpeed.innerHTML = weather.wSpeed;
-	hum.innerHTML = weather.hum;
+	temp.innerHTML = weather.temp + "&deg;" + "c";
+	wSpeed.innerHTML = weather.wSpeed + " mph";
+	hum.innerHTML = weather.hum + " %";
+	icn.scr = weather.icn;
+	//icn.src = "./img/" + weather.icn + ".png"
 }
 
 // function to get the current cordinate
 function showPosition (position) {
 	updateByGeo(position.coords.latitude, position.coords.longitude);
+	console.log(position.coords.latitude, position.coords.longitude);
 }
 
 window.onload = function () {
 	loc = document.getElementById("location");
-	// icon = document.getElementById("icon");
+	icn = document.getElementById("icon");
 	desc = document.getElementById("description");
 	temp = document.getElementById("temperature");
 	wSpeed = document.getElementById("windSpeed");
