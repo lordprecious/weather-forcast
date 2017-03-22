@@ -63,6 +63,7 @@ function updateWeather (weather) {
 	hum.innerHTML = weather.hum + " %";
 	//icn.scr = weather.icn;
 	icn.src = "./img/" + weather.icn + ".png"
+
 }
 
 // function to get the current cordinate
@@ -70,6 +71,8 @@ function showPosition (position) {
 	updateByGeo(position.coords.latitude, position.coords.longitude);
 	console.log(position.coords.latitude, position.coords.longitude);
 }
+
+
 
 window.onload = function () {
 	loc = document.getElementById("location");
