@@ -1,9 +1,9 @@
 body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	/*background-image: url("../img/pic2.jpg");
+	background-image: url("../img/pic4.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	opacity: 0.9;*/
+	/*opacity: 0.2;*/
+	background-size: cover;
 }
 
 #mainWrapper {
