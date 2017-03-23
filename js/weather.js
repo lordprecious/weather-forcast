@@ -7,6 +7,7 @@ var hum;
 var latitude;
 var longitude;
 var count = 1;
+var dCount = 1;
 
 // my API key
 var myId = "82556f01ebbb43d4c57e8628105cc97e"
@@ -24,7 +25,7 @@ function updateByName (name) {
 
 // function to get weather info using current coordinates
 function updateByGeo (lat, lon) {
-	var url  = "http://api.openweathermap.org/data/2.5/weather?" +
+	var url = "http://api.openweathermap.org/data/2.5/weather?" +
 				"&lat=" + lat + "&lon=" + lon + "&appid=" + myId;
 	sendRequest(url);
 }
@@ -51,9 +52,6 @@ function sendRequest (url) {
 	xmlhttp.send();
 }
 
-
-
-
 // function to convert temperature from kelvin to celcius
 function tempToCelcius (kel) {
 	return Math.round(kel - 273.15)
@@ -68,10 +66,8 @@ function updateWeather (weather) {
 	temp.innerHTML = weather.temp + "&deg;" + "c";
 	wSpeed.innerHTML = weather.wSpeed + " mph";
 	hum.innerHTML = weather.hum + "%";
-	//icn.src = "./img/" + weather.icn + ".png"
 
 	updateCities();
-
 }
 
 
@@ -91,7 +87,6 @@ function cityUrl () {
 	var url  = "http://api.openweathermap.org/data/2.5/find?" +
 				"&lat=" + latitude + "&lon=" + longitude + "&cnt=15" + "&appid=" + myId;
 	sendCitiesRequest(url);
-
 }
 
 
@@ -119,7 +114,6 @@ function sendCitiesRequest (url) {
 	xmlhttp.send();
 }
 
-
 function updateCitiesWeather (weather) {
 	console.log(weather);
 	loc.innerHTML = weather.loc;
@@ -128,8 +122,59 @@ function updateCitiesWeather (weather) {
 	if (count < 4) {
 		count ++;
 		updateCities();
+	} else {
+		updateDays();
 	}
 }
+
+function updateDays () {
+	//loc = document.getElementById("day" + dCount + "Location");
+	// icn = document.getElementById("area" + count + "Icon");
+	desc = document.getElementById("day" + dCount + "Description");
+	temp = document.getElementById("day" + dCount + "Temperature");
+	hum = document.getElementById("day" + dCount + "Humidity");
+
+	daysUrl();
+}
+
+function daysUrl () {
+	// http://api.openweathermap.org/data/2.5/forecast/daily?&lat=6.5538929&lon=3.3657957&cnt=10&appid=82556f01ebbb43d4c57e8628105cc97e
+	var url  = "http://api.openweathermap.org/data/2.5/forecast/daily?" +
+				"&lat=" + latitude + "&lon=" + longitude + "&cnt=10" + "&appid=" + myId;
+	sendDayRequest(url);
+}
+
+function sendDayRequest (url) {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			var data = JSON.parse(xmlhttp.responseText);
+			var weather = {};
+			console.log(data.list[0].humidity);
+			weather.temp = tempToCelcius(data.list[dCount].temp.day);
+			weather.desc = data.list[dCount].weather[0].description;
+			weather.hum = data.list[dCount].humidity
+
+
+			updateDayWeather(weather);
+		}
+	};
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+}
+
+function updateDayWeather(weather) {
+	console.log(weather);
+	hum.innerHTML = weather.hum + "%";
+	desc.innerHTML = weather.desc;
+	temp.innerHTML = weather.temp + "&deg;" + "c";
+	if (dCount < 5) {
+		dCount ++;
+		updateDays();
+	}
+}
+
+
 
 
 

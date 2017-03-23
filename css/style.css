@@ -44,8 +44,8 @@ body {
 	width: 70%;
 	height: 320px;
 	float: left;
-	background-color: black;
-	opacity: 0.6;
+	/*background-color: black;
+	opacity: 0.6;*/
 	box-sizing: border-box;
 	
 
@@ -109,7 +109,46 @@ body {
 	padding-top: 10px;
 }
 
+#day1 {
+	width: 20%;
+	height: 320px;
+	background-color: black;
+	opacity: 0.6;
+	float: left;
 
+}
+
+#day2 {
+	width: 20%;
+	height: 320px;
+	background-color: black;
+	opacity: 0.4;
+	float: left;
+}
+
+#day3 {
+	width: 20%;
+	height: 320px;
+	background-color: black;
+	opacity: 0.6;
+	float: left;
+}
+
+#day4 {
+	width: 20%;
+	height: 320px;
+	background-color: black;
+	opacity: 0.4;
+	float: left;
+}
+
+#day5 {
+	width: 20%;
+	height: 320px;
+	background-color: black;
+	opacity: 0.6;
+	float: left;
+}
 
 .arrange {
 	margin-right: 50px;
@@ -120,7 +159,6 @@ body {
 	color: #FFFFFF;
 	padding-bottom: 10px;
 	font-weight: 200;
-
 }
 
 .label2 {
@@ -139,4 +177,9 @@ body {
 	font-size: 20px;
 	color: #FFFFFF;
 	text-align: center;
+}
+
+.sound {
+	/*display: none;*/
+	visibility: hidden;
 }
