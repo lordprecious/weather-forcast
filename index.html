@@ -1,92 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Weather Forcast</title>
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
-	<script type="text/javascript" src="./js/weather.js"></script>
-	
-</head>
-<body>
-<audio>
-	<source src="storm.mp3" type="audio/mpeg">
-</audio>
-<embed src="storm.mp3" class="sound">
- <div class="heading">Weather Forecast <img src="./img/float.png" height="150px"></div>
-<div id="mainWrapper">
-	<div id="currentWrapper">
-	<div class="label">Current Weather Condition For Present Location</div>
-	<div id="otherWrapper" class="others">
-		<div id = "today">
-			<div id = "location"></div>
-			<div><img id = "icon" src=""></div>
-			<div id = "description"></div>
-			<div id = "temperature"><img src=""></div>
-			<div id = "windSpeed"></div>
-			<div id = "humidity"></div>
-		</div>
-		<div id="otherDays">
-			<div id="day1">
-				<div id="day1Location "></div>
-				<div id="day1Description"></div>
-				<div id="day1Temperature"></div>
-				<div id="day1Humidity"></div>
-				<div></div>
+	<head>
+		<title>Weather Forcast</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<script type="text/javascript" src="./js/weather.js"></script>
+		
+	</head>
+	<body>
+		 <div class="heading">Weather Forecast <img src="./img/float.png" height="150px"></div>
+		<div id="mainWrapper">
+			<div id="currentWrapper">
+			<div class="label">Current Weather Condition For Present Location</div>
+			<div id="otherWrapper" class="others">
+				<div id = "today">
+					<div id = "location"></div>
+					<div><img id = "icon" src=""></div>
+					<div id = "description"></div>
+					<div id = "temperature"><img src=""></div>
+					<div id = "windSpeed"></div>
+					<div id = "humidity"></div>
+				</div>
+				<div id="otherDays">
+					<div id="day1" class="dayOdd">
+						<div id="day1Location "></div>
+						<div id="day1Description"></div>
+						<div id="day1Temperature"></div>
+						<div id="day1Humidity"></div>
+						<div></div>
+					</div>
+					<div id="day2" class="dayEven">
+						<div id="day2Location "></div>
+						<div id="day2Description"></div>
+						<div id="day2Temperature"></div>
+						<div id="day2Humidity"></div>
+					</div>
+					<div id="day3" class="dayOdd">
+						<div id="day3Location "></div>
+						<div id="day3Description"></div>
+						<div id="day3Temperature"></div>
+						<div id="day3Humidity"></div>
+					</div>
+					<div id="day4" class="dayEven">
+						<div id="day4Location "></div>
+						<div id="day4Description"></div>
+						<div id="day4Temperature"></div>
+						<div id="day4Humidity"></div>
+					</div>
+					<div id="day5" class="dayOdd">
+						<div id="day5Location "></div>
+						<div id="day5Description"></div>
+						<div id="day5Temperature"></div>
+						<div id="day5Humidity"></div>
+					</div>
+				</div>
 			</div>
-			<div id="day2">
-				<div id="day2Location "></div>
-				<div id="day2Description"></div>
-				<div id="day2Temperature"></div>
-				<div id="day2Humidity"></div>
+			<div class="label2">Current Weather Condition For Nearby Locations</div>
+			<div id="otherWrapper" class="others">
+				<div id="area1" class="arrange">
+					<div id="area1Location"></div>
+					<div id="area1Description"></div>
+					<div id="area1Speed"></div>
+					<div id="area1Temperature"></div>
+					<div id="area1Humidity"></div>
+				</div>
+				<div id="area2" class="arrange">
+					<div id="area2Location"></div>
+					<div id="area2Description"></div>
+					<div id="area2Speed"></div>
+					<div id="area2Temperature"></div>
+					<div id="area2Humidity"></div>
+				</div>
+				<div id="area3" class="arrange">
+					<div id="area3Location"></div>
+					<div id="area3Description"></div>
+					<div id="area3Speed"></div>
+					<div id="area3Temperature"></div>
+					<div id="area3Humidity"></div>
+				</div>
+				<div id="area4" class="arrange2">
+					<div id="area4Location"></div>
+					<div id="area4Description"></div>
+					<div id="area4Speed"></div>
+					<div id="area4Temperature"></div>
+					<div id="area4Humidity"></div>
+				</div>
 			</div>
-			<div id="day3">
-				<div id="day3Location "></div>
-				<div id="day3Description"></div>
-				<div id="day3Temperature"></div>
-				<div id="day3Humidity"></div>
-			</div>
-			<div id="day4">
-				<div id="day4Location "></div>
-				<div id="day4Description"></div>
-				<div id="day4Temperature"></div>
-				<div id="day4Humidity"></div>
-			</div>
-			<div id="day5">
-				<div id="day5Location "></div>
-				<div id="day5Description"></div>
-				<div id="day5Temperature"></div>
-				<div id="day5Humidity"></div>
-			</div>
 		</div>
-	</div>
-	<div class="label2">Current Weather Condition For Nearby Locations</div>
-	<div id="otherWrapper" class="others">
-		<div id="area1" class="arrange">
-			<div id="area1Location"></div>
-			<div id="area1Icon"></div>
-			<div id="area1Description"></div>
-			<div id="area1Temperature"></div>
-		</div>
-		<div id="area2" class="arrange">
-			<div id="area2Location"></div>
-			<div id="area2Icon"></div>
-			<div id="area2Description"></div>
-			<div id="area2Temperature"></div>
-		</div>
-		<div id="area3" class="arrange">
-			<div id="area3Location"></div>
-			<div id="area3Icon"></div>
-			<div id="area3Description"></div>
-			<div id="area3Temperature"></div>
-		</div>
-		<div id="area4" class="arrange2">
-			<div id="area4Location"></div>
-			<div id="area4Icon"></div>
-			<div id="area4Description"></div>
-			<div id="area4Temperature"></div>
-		</div>
-	</div>
-</div>
-
-
-</body>
+		<embed src="storm.mp3" class="sound">
+	</body>
 </html>

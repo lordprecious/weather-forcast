@@ -44,11 +44,7 @@ body {
 	width: 70%;
 	height: 320px;
 	float: left;
-	/*background-color: black;
-	opacity: 0.6;*/
 	box-sizing: border-box;
-	
-
 }
 
 #otherWrapper {
@@ -56,9 +52,7 @@ body {
 	height: 180px;
 	float: bottom;
 	box-sizing: border-box;
-
 }
-
 
 #location {
 	font-size: 50px;
@@ -73,7 +67,6 @@ body {
 	border-top: 3px solid #A58078;
 	box-sizing: border-box;
 	padding-top: 10px;
-
 }
 
 #area2 {
@@ -109,45 +102,23 @@ body {
 	padding-top: 10px;
 }
 
-#day1 {
+.dayOdd {
 	width: 20%;
 	height: 320px;
 	background-color: black;
 	opacity: 0.6;
 	float: left;
-
+	box-sizing: border-box;
+	padding-top: 100px;
 }
-
-#day2 {
+.dayEven {
 	width: 20%;
 	height: 320px;
 	background-color: black;
 	opacity: 0.4;
 	float: left;
-}
-
-#day3 {
-	width: 20%;
-	height: 320px;
-	background-color: black;
-	opacity: 0.6;
-	float: left;
-}
-
-#day4 {
-	width: 20%;
-	height: 320px;
-	background-color: black;
-	opacity: 0.4;
-	float: left;
-}
-
-#day5 {
-	width: 20%;
-	height: 320px;
-	background-color: black;
-	opacity: 0.6;
-	float: left;
+	box-sizing: border-box;
+	padding-top: 100px;
 }
 
 .arrange {
@@ -180,6 +151,5 @@ body {
 }
 
 .sound {
-	/*display: none;*/
 	visibility: hidden;
 }
