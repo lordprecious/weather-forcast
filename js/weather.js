@@ -68,7 +68,7 @@ function updateWeather (weather) {
 	temp.innerHTML = weather.temp + "&deg;" + "c";
 	wSpeed.innerHTML = weather.wSpeed + " mph";
 	hum.innerHTML = weather.hum + "%";
-	icn.src = "./img/" + weather.icn + ".png"
+	//icn.src = "./img/" + weather.icn + ".png"
 
 	updateCities();
 
@@ -77,11 +77,11 @@ function updateWeather (weather) {
 
 
 function updateCities () {
-		loc = document.getElementById("area" + count + "Location");
-		icn = document.getElementById("area" + count + "Icon");
-		desc = document.getElementById("area" + count + "Description");
-		temp = document.getElementById("area" + count + "Temperature");
-		cityUrl();
+	loc = document.getElementById("area" + count + "Location");
+	icn = document.getElementById("area" + count + "Icon");
+	desc = document.getElementById("area" + count + "Description");
+	temp = document.getElementById("area" + count + "Temperature");
+	cityUrl();
 }
 
 
@@ -104,9 +104,13 @@ function sendCitiesRequest (url) {
 			var weather = {};
 			var num = Math.floor((Math.random() * 15) + 1);
 			weather.loc = data.list[num].name;
-			// weather.icn = data.weather[0].icon;
 			weather.desc = data.list[num].weather[0].description;
 			weather.temp = tempToCelcius(data.list[num].main.temp);
+			//weather.loc = data.list[num] ? data.list[num].name : "No location";
+			//console.log(weather.loc);
+			// weather.icn = data.weather[0].icon;
+			//weather.desc = data.list[num] ? data.list[num].weather[0].description : "No Description";
+			//weather.temp = data.list[num]? tempToCelcius(data.list[num].main.temp) : 0;
 			//console.log(data.list[num].main.temp);
 			updateCitiesWeather(weather);
 		}
@@ -117,10 +121,11 @@ function sendCitiesRequest (url) {
 
 
 function updateCitiesWeather (weather) {
+	console.log(weather);
 	loc.innerHTML = weather.loc;
 	desc.innerHTML = weather.desc;
 	temp.innerHTML = weather.temp + "&deg;" + "c";
-	if (count <= 4) {
+	if (count < 4) {
 		count ++;
 		updateCities();
 	}
@@ -156,7 +161,7 @@ window.onload = function () {
 
 	} else {
 		var name = window.prompt("could not discover your location. What is your current city");
-		updateByName("jos");
+		updateByName("name");
 	}
 
 	

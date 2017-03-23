@@ -2,93 +2,141 @@ body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	background-image: url("../img/pic4.jpg");
 	background-repeat: no-repeat;
-	/*opacity: 0.2;*/
 	background-size: cover;
+}
+
+.heading {
+	font-size: 70px;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: 600;
+	padding-bottom: 15px;
 }
 
 #mainWrapper {
 	width: 70%;
-	height:500px;
-	background-image: url("../img/pic5.jpg");
+	height:600px;
 	margin: auto;
-	margin-top: 10%;
-	/*padding: 0px 20px 5px 20px;*/
-    /*border-radius: 10px*/
-
 }
 
 #currentWrapper {
 	width: 100%;
 	height: 320px;
+	margin-bottom: 10px;	
+}
+
+#today {
+	width: 30%;
+	height: 320px;
+	float: left;
+	background-color: #000000;
+	opacity: 0.4;
+	padding: 10px 10px 10px 10px;
+	font-weight: 500;
+	line-height: 50px;
+	font-size: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#otherDays {
+	width: 70%;
+	height: 320px;
+	float: left;
+	background-color: black;
+	opacity: 0.6;
+	box-sizing: border-box;
 	
+
 }
 
 #otherWrapper {
 	width: 100%;
 	height: 180px;
-	/*background-color: blue;*/
 	float: bottom;
+	box-sizing: border-box;
 
 }
 
-#today {
-	width: 30%;
-	height: 93%;
-	background-color: #000000;
-	opacity: 0.4;
-	padding: 10px 10px 10px 10px;
-	border-top: 3px solid #FFFFFF;
-	font-weight: 400;
-	line-height: 50px;
-	font-size: 30px;
-	color: #FFFFFF;
-	text-align: center;
-}
 
 #location {
 	font-size: 50px;
 }
 
 #area1 {
-	width: 25%;
+	width: 22%;
 	height: 100%;
 	float: left;
 	background-color: black;
 	opacity: 0.6;
 	border-top: 3px solid #A58078;
+	box-sizing: border-box;
+	padding-top: 10px;
 
 }
 
 #area2 {
-	width: 25%;
+	width: 21%;
 	height: 100%;
 	float: left;
 	background-color: black;
 	opacity: 0.4;
 	border-top: 3px solid #84A227;
+	box-sizing: border-box;
+	padding-top: 10px;
 }
 
 #area3 {
-	width: 25%;
+	width: 22%;
 	height: 100%;
 	float: left;
 	background-color: black;
 	opacity: 0.6;
 	border-top: 3px solid #A58078;
+	box-sizing: border-box;
+	padding-top: 10px;
 }
 
 #area4 {
-	width: 25%;
+	width: 21%;
 	height: 100%;
 	float: left;
 	background-color: black;
 	opacity: 0.4;
 	border-top: 3px solid #84A227;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+
+
+
+.arrange {
+	margin-right: 50px;
+}
+
+.label {
+	font-size: 25px;
+	color: #FFFFFF;
+	padding-bottom: 10px;
+	font-weight: 200;
+
+}
+
+.label2 {
+	font-size: 25px;
+	color: #FFFFFF;
+	padding-bottom: 10px;
+	font-weight: 200;
+
+}
+
+.arrange2 {
+	margin: 0;
 }
 
 .others {
 	font-size: 20px;
 	color: #FFFFFF;
 	text-align: center;
-	/*padding: 10px 10px 10px 10px;*/
 }
